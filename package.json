@@ -1,4 +1,5 @@
 {
+  "homepage": "http://ygamijs.github.io/webpack-test-deploy",
   "name": "bank",
   "version": "1.0.0",
   "description": "",
@@ -9,7 +10,9 @@
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
     "serve": "webpack serve",
-    "clear": "rd /s /q dist"
+    "clear": "rd /s /q dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
